@@ -1,0 +1,13 @@
+[m,n] = size(data) ;
+P = 0.70 ;
+idx = randperm(m)  ;
+Training = data(idx(1:round(P*m)),:) ; 
+Testing = data(idx(round(P*m)+1:end),:) ;
+[Rm,Rn] = size(Training);
+Rr = 1+(Rm-1).*rand(1,1);
+[Em,En] = size(Testing);
+Er = 1+(Em-1).*rand(1,1);
+[Rm,Rn] = size(Training);
+Rr = round(1+(Rm-1).*rand(1,1),0);
+[Em,En] = size(Testing);
+Er = round(1+(Em-1).*rand(1,1),0);
